@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import io.erikrios.github.mynavigation.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -27,7 +28,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnCategory.setOnClickListener {
-            Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_categoryFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_categoryFragment)
         }
 
         binding.btnProfile.setOnClickListener { mView ->
