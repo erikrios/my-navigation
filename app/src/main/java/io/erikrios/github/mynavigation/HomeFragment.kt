@@ -30,8 +30,8 @@ class HomeFragment : Fragment() {
             Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_categoryFragment)
         }
 
-        binding.btnProfile.setOnClickListener {
-            view.findNavController().navigate(R.id.action_homeFragment_to_profileActivity)
+        binding.btnProfile.setOnClickListener { mView ->
+            mView.findNavController().navigate(R.id.action_homeFragment_to_profileActivity)
         }
     }
 
